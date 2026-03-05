@@ -1,6 +1,6 @@
 # Assignment 2 — Weather Forecast
 
-Small full-stack app (React client + Express/MongoDB server) for fetching and storing weather data using the OpenWeatherMap API.
+ full-stack app (React client + Express/MongoDB server) for fetching and storing weather data using the OpenWeatherMap API.
 
 ## Repository layout
 
@@ -13,6 +13,9 @@ Small full-stack app (React client + Express/MongoDB server) for fetching and st
 - Node.js (16+ recommended) and npm
 - A MongoDB instance (connection string in `.env`)
 - An OpenWeatherMap API key
+
+  <img width="1688" height="1440" alt="image" src="https://github.com/user-attachments/assets/3f0e9512-3a23-4cf3-a360-9e835fef5e37" />
+
 
 
 ## Environment
