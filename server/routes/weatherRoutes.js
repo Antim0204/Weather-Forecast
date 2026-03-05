@@ -30,7 +30,7 @@ router.post("/fetch/:city", async (req, res) => {
             { city: city },        
             weatherData,           
             { 
-                new: true,         
+                returnDocument: "after",       
                 upsert: true,      
                 runValidators: true
             }
@@ -47,12 +47,12 @@ router.post("/fetch/:city", async (req, res) => {
 
 //Get latest record from DB
 
-router.get("/latest",async(req,res)=>{
+router.get("/latest/:city",async(req,res)=>{
     try{
-        const latest=await Weather.findOne().sort({createdAt:-1});
+        const city = req.params.city.toLowerCase();
+        const latest=await Weather.findOne({ city }).sort({createdAt:-1});
         if(!latest){
             return res.status(404).json({message:"No weather data found" });
-
         }
         res.json(latest);
     }
