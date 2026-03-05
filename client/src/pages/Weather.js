@@ -13,7 +13,7 @@ const Weather = () => {
 
   const fetchLatest = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/weather/latest");
+      const res = await axios.get(`http://localhost:5000/api/weather/latest/${city}`);
       setWeather(res.data);
     } catch (err) {
       console.error(err);
